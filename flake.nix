@@ -1,5 +1,5 @@
 {
-  description = "Dendritic Niri config";
+  description = "Dendritic Niri config with Noctalia Shell";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
