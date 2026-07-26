@@ -3,12 +3,7 @@
   self,
   ...
 }: {
-  perSystem = {pkgs, ...}: let
-    nixWallpapers = builtins.fetchGit {
-      url = "https://github.com/DeagledSmeagol/wallpapers.git";
-      rev = "af5e0262500174476f1b17653af7976f7a55a909";
-    };
-  in {
+  perSystem = {pkgs, ...}: {
     packages.myNoctalia = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
       inherit pkgs;
       settings = {
@@ -624,7 +619,7 @@
         };
         wallpaper = {
           automationEnabled = false;
-          directory = "${nixWallpapers}";
+          directory = "${inputs.wallpapers}";
           enableMultiMonitorDirectories = false;
           enabled = true;
           favorites = [
@@ -639,7 +634,7 @@
                 "#5e81ac"
                 "#bf616a"
               ];
-              path = "${nixWallpapers}/default.jpg";
+              path = "${inputs.wallpapers}/default.jpg";
               useWallpaperColors = false;
             }
           ];
@@ -721,9 +716,6 @@
           ui = {
             settingsSidebarExpanded = true;
           };
-          #wallpapers = {
-          # eDP-1 = "${nixWallpapers}/wallpaper.jpg";
-          #};
         };
       };
     };

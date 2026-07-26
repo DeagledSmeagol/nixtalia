@@ -85,7 +85,24 @@
         "flake-parts": "flake-parts",
         "import-tree": "import-tree",
         "nixpkgs": "nixpkgs",
+        "wallpapers": "wallpapers",
         "wrapper-modules": "wrapper-modules"
+      }
+    },
+    "wallpapers": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1785087302,
+        "narHash": "sha256-/pokymnPxRsUERDWHaB6RNWE2/14uMeuamnQy7604Ks=",
+        "owner": "DeagledSmeagol",
+        "repo": "wallpapers",
+        "rev": "af5e0262500174476f1b17653af7976f7a55a909",
+        "type": "github"
+      },
+      "original": {
+        "owner": "DeagledSmeagol",
+        "repo": "wallpapers",
+        "type": "github"
       }
     },
     "wrapper-modules": {
