@@ -7,7 +7,7 @@ A flake that combines a preconfigured niri, and noctalia shell for NixOS.
 You can use this flake in a variety of ways. either running it directly via
 
 ```nix
-nix run https://github.com/DeagledSmeagol/nixtalia#default
+nix run github:DeagledSmeagol/nixtalia
 ```
 
 or via importing one of the package exports.
