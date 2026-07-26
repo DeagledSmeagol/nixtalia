@@ -3,7 +3,12 @@
   self,
   ...
 }: {
-  perSystem = {pkgs, ...}: {
+  perSystem = {pkgs, ...}: let
+    nixWallpapers = builtins.fetchGit {
+      url = "https://github.com/DeagledSmeagol/nixtalia.git";
+      rev = "1de2692211715c388868d789fe8146bd40ca9d43";
+    };
+  in {
     packages.myNoctalia = inputs.wrapper-modules.wrappers.noctalia-shell.wrap {
       inherit pkgs;
       settings = {
@@ -363,7 +368,10 @@
           iRadiusRatio = 1;
           keybinds = {
             keyDown = ["Down"];
-            keyEnter = ["Return" "Enter"];
+            keyEnter = [
+              "Return"
+              "Enter"
+            ];
             keyEscape = ["Esc"];
             keyLeft = ["Left"];
             keyRemove = ["Del"];
@@ -492,7 +500,11 @@
           autoHideMs = 2000;
           backgroundOpacity = 1;
           enabled = true;
-          enabledTypes = [0 1 2];
+          enabledTypes = [
+            0
+            1
+            2
+          ];
           location = "top_right";
           monitors = [];
           overlayLayer = true;
@@ -612,7 +624,7 @@
         };
         wallpaper = {
           automationEnabled = false;
-          directory = "/home/alex/Pictures/Wallpapers";
+          directory = "${nixWallpapers}";
           enableMultiMonitorDirectories = false;
           enabled = true;
           favorites = [
@@ -621,8 +633,13 @@
               colorScheme = "Nord";
               darkMode = true;
               generationMethod = "tonal-spot";
-              paletteColors = ["#8fbcbb" "#88c0d0" "#5e81ac" "#bf616a"];
-              path = "/home/alex/.wallpaper.png";
+              paletteColors = [
+                "#8fbcbb"
+                "#88c0d0"
+                "#5e81ac"
+                "#bf616a"
+              ];
+              path = "${nixWallpapers}/wallpaper.jpg";
               useWallpaperColors = false;
             }
           ];
@@ -643,7 +660,14 @@
           sortOrder = "name";
           transitionDuration = 1500;
           transitionEdgeSmoothness = 0.05;
-          transitionType = ["fade" "disc" "stripes" "wipe" "pixelate" "honeycomb"];
+          transitionType = [
+            "fade"
+            "disc"
+            "stripes"
+            "wipe"
+            "pixelate"
+            "honeycomb"
+          ];
           useOriginalImages = false;
           useSolidColor = false;
           useWallhaven = false;
@@ -690,11 +714,15 @@
           doNotDisturb = false;
           lockScreenActive = false;
           noctaliaPerformanceMode = false;
-          notificationsState = {lastSeenTs = 1783904641000;};
+          notificationsState = {
+            lastSeenTs = 1783904641000;
+          };
           openedPanel = "";
-          ui = {settingsSidebarExpanded = true;};
+          ui = {
+            settingsSidebarExpanded = true;
+          };
           wallpapers = {
-            eDP-1 = "/home/alex/.wallpaper.png";
+            eDP-1 = "${nixWallpapers}/wallpaper.jpg";
           };
         };
       };
