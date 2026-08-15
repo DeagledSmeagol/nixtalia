@@ -12,9 +12,9 @@
         xwayland-satellite.path =
           lib.getExe pkgs.xwayland-satellite;
 
-        spawn-at-startup = [
-          (lib.getExe self'.packages.myNoctalia)
-        ];
+        #spawn-at-startup = [
+        #(lib.getExe self'.packages.myNoctalia)
+        #];
 
         screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
 
