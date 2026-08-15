@@ -256,10 +256,9 @@
           manualSunrise = "06:30";
           manualSunset = "18:30";
           monitorForColors = "";
-          predefinedScheme = "Nord";
           schedulingMode = "off";
           syncGsettings = true;
-          useWallpaperColors = false;
+          useWallpaperColors = true;
         };
         controlCenter = {
           cards = [
