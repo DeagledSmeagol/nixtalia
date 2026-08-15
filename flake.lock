@@ -92,11 +92,11 @@
     "wallpapers": {
       "flake": false,
       "locked": {
-        "lastModified": 1785087302,
-        "narHash": "sha256-/pokymnPxRsUERDWHaB6RNWE2/14uMeuamnQy7604Ks=",
+        "lastModified": 1786769176,
+        "narHash": "sha256-F+mnHYQKvn8XiI9Bt3WxW718lWZCiPHU+bx5EqVd8PE=",
         "owner": "DeagledSmeagol",
         "repo": "wallpapers",
-        "rev": "af5e0262500174476f1b17653af7976f7a55a909",
+        "rev": "83c43bfc2cca848ab5b2f42fb59dba134b6e0ed2",
         "type": "github"
       },
       "original": {
